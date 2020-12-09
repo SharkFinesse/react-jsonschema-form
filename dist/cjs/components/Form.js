@@ -426,6 +426,7 @@ function (_Component) {
     value: function submit() {
       if (this.formElement) {
         this.formElement.dispatchEvent(new CustomEvent("submit", {
+          bubbles: true,
           cancelable: true
         }));
       }
